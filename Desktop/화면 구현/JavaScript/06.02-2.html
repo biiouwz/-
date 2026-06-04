@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습과제 5</title>
+    <link href="../css/06.02.css" rel="stylesheet">
+</head>
+<body>
+
+    <button id="a" class="show-btn">버튼1</button>
+    <button id="b" class="show-btn">버튼2</button>
+
+    <div id="alert1" class="alert-box alert-warning" style="display:none">
+        <strong>알림!</strong> 아이디를 입력하세요
+        <button onclick="closeAlert('alert1')" class="close-btn">x</button>
+    </div>
+
+    <div id="alert2" class="alert-box alert-info" style="display:none">
+        <strong>알림!</strong> 비밀번호를 입력하세요
+        <button onclick="closeAlert('alert2')" class="close-btn">x</button>
+    </div>
+
+    <script>
+        document.querySelector('#a').addEventListener('click', function() {
+            document.querySelector('#alert1').style.display = 'block'; 
+        });
+
+        document.querySelector('#b').addEventListener('click', function() {
+            document.querySelector('#alert2').style.display = 'block'; 
+        });
+        function closeAlert(id){
+            document.querySelector('#' + id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
