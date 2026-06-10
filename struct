@@ -1,0 +1,18 @@
+# 파이썬의 queue 모듈 사용
+import queue as q
+
+text = 'kim ri won'
+s1 = q.LifoQueue(maxsize=20)
+for chr in text:
+  s1.put(chr)
+while not s1.empty():
+  print(s1.get(),end='')
+
+# 파이썬의 list 사용
+
+s1 = list = []
+text = 'kim ri won'
+for chr in text:
+  s1.append(chr)
+while s1:
+  print(s1.pop(), end='')
