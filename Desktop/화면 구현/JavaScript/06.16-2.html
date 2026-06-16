@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.16-2</title>
+</head>
+
+<body>
+    <div class="alert">
+        <span id="num">5</span>초 이내 구매시 사은품 증정
+    </div>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    var count=5;
+    setInterval(function() {
+        console.log(count)
+        count--
+        $('#num').html(count);
+    }, 1000);
+    setInterval(function() {
+        $('.alert').fadeOut();
+    }, 5000);
+
+</script>
